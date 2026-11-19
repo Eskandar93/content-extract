@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: notion-content
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/notion_db
+    username: ${DB_USERNAME:postgres}
+    password: ${DB_PASSWORD:CHANGE_ME}
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: ${SHOW_SQL:false}
+    properties:
+      hibernate:
+        format_sql: true
+
+server:
+  port: ${SERVER_PORT:8080}
+
+gemini:
+  api-key: ${GEMINI_API_KEY:}
+  model: ${GEMINI_MODEL:gemini-2.5-flash}
