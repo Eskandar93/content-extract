@@ -1,6 +1,7 @@
 spring:
   application:
     name: notion-content
+    import: optional:file:.env[.properties]
 
   datasource:
     url: jdbc:postgresql://localhost:5432/notion_db
